@@ -1,0 +1,49 @@
+{
+	"id": "e3406393-6940-4c02-866d-807e529ab500",
+	"name": "Radix Betanet",
+	"values": [
+		{
+			"key": "https",
+			"value": "https",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "nginxUsername",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "nginxPassword",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "validatorId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "walletAddress",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "validatorName",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "validatorUrl",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-05-09T08:03:11.316Z",
+	"_postman_exported_using": "Postman/8.3.1"
+}
