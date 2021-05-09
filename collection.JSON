@@ -1,0 +1,1192 @@
+{
+	"info": {
+		"_postman_id": "801c9ff7-7028-4193-83b1-05193b2b8238",
+		"name": "Radix Betanet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "System",
+			"item": [
+				{
+					"name": "info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/system/info",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"system",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "peers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/system/peers",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"system",
+								"peers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "proof",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/system/proof",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"system",
+								"proof"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkpoints",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/system/checkpoints",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"system",
+								"checkpoints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "epochProof",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/system/epochproof",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"system",
+								"epochproof"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Node",
+			"item": [
+				{
+					"name": "validator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/validator",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"validator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "node",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{https}}://{{host}}/node",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Execute",
+			"item": [
+				{
+					"name": "StakeTokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"StakeTokens\",\r\n            \"params\": {\r\n                \"to\":\"required string\",\r\n                \"amount\":\"required integer\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnstakeTokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"UnstakeTokens\",\r\n            \"params\": {\r\n                \"from\":\"required string\",\r\n                \"amount\":\"required integer\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MoveStake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"MoveStake\",\r\n            \"params\": {\r\n                \"from\":\"required string\",\r\n                \"to\":\"required string\",\r\n                \"amount\":\"required integer\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterValidator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"RegisterValidator\",\r\n            \"params\":{}\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnregisterValidator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"UnregisterValidator\",\r\n            \"params\":{}\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateValidator",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"UpdateValidator\",\r\n            \"params\":{\r\n                \"name\": \"{{validatorName}}\", \r\n                \"url\": \"{{validatorUrl}}\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateMutableToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"CreateMutableToken\",\r\n            \"params\":{\r\n                \"description\": \"string\", \r\n                \"iconUrl\": \"string\",\r\n                \"url\": \"string\",\r\n                \"symbol\": \"required string\",\r\n                \"name\": \"required string\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateFixedToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"CreateFixedToken\",\r\n            \"params\":{\r\n                \"symbol\": \"required string\", \r\n                \"name\": \"required string\",\r\n                \"description\": \"optional string\",\r\n                \"iconUrl\": \"optional string\",\r\n                \"url\": \"optional string\",\r\n                \"supply\": \"required integer\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TransferTokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"TransferTokens\",\r\n            \"params\":{\r\n                \"rri\": \"required string\", \r\n                \"to\": \"required string\",\r\n                \"amount\": \"required integer\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MintTokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"MintTokens\",\r\n            \"params\":{\r\n                \"rri\": \"required string\", \r\n                \"to\": \"required string\",\r\n                \"amount\": \"required integer\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BurnTokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"actions\": [\r\n        {\r\n            \"action\":\"BurnTokens\",\r\n            \"params\":{\r\n                \"rri\": \"required string\", \r\n                \"amount\": \"required integer\"\r\n                }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{https}}://{{host}}/node/execute",
+							"protocol": "{{https}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"node",
+								"execute"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Public RPC",
+			"item": [
+				{
+					"name": "Get Network ID",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": \"1\",\n    \"method\": \"radix.networkId\",\n    \"params\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Native Token Info",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.nativeToken\",\n    \"params\": [],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Token Balances",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.tokenBalances\",\n    \"params\": [\"{{walletAddress}}\"],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Token Info",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.tokenInfo\",\n    \"params\": [\"xrd_rb1qya85pwq\"],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction History",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.transactionHistory\",\n    \"params\": [\n        \"{{walletAddress}}\",\n        1,\n        \"cursor\"\n    ],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stake Positions",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.stakePositions\",\n    \"params\": [\n        \"{{walletAddress}}\"\n    ],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unstaked Positions",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.unstakePositions\",\n    \"params\": [\n        \"{{walletAddress}}\"\n    ],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction Status",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.statusOfTransaction\",\n    \"params\": [\n        \"required string\"\n    ],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Network Throughput",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.networkTransactionThroughput\",\n    \"params\": [],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transaction Demand",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.networkTransactionDemand\",\n    \"params\": [],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Validators",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.validators\",\n    \"params\": [100,1],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lookup Validator",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.lookupValidator\",\n    \"params\": [\"{{validatorId}}\"],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Build Transaction (Token transfer)",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"method\": \"radix.buildTransaction\",\n  \"params\": [\n      [\n        {\n          \"type\": \"TokenTransfer\",\n          \"from\": \"required string\",\n          \"to\": \"required string\",\n          \"amount\": \"required integer\",\n          \"tokenIdentifier\": \"xrd_rb1qya85pwq\"\n        }\n      ]\n  ],\n  \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Build Transaction (Stake Tokens)",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"method\": \"radix.buildTransaction\",\n  \"params\": [\n      [\n        {\n          \"type\": \"StakeTokens\",\n          \"from\": \"required string\",\n          \"validator\": \"{{validatorId}}\",\n          \"amount\": \"required integer\"\n        }\n      ]\n  ],\n  \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finalize Transaction",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"radix.finalizeTransaction\",\n    \"params\": [\n        \"0103010403fd45d9f094a879af7c1362b3b6358a9acdf4a767c3593fae06af98db5a4ca5520000000000000000000000000000000000000000000000000000000000000064047667c4d25eee55ee25a9d59f7c14bb31a2163fc2e31bb4837eb364c894ff2514000000000103010402fff5cd81a138d9ae8c6282f1f9f81561b0dfb1558c584c493f38697f4c0a47820000000000000000000000000000000000000000000000000de0b6b3a763ff9c0005000000020103010402fff5cd81a138d9ae8c6282f1f9f81561b0dfb1558c584c493f38697f4c0a47820000000000000000000000000000000000000000000000000c7d713b49d9ff9c00\",\n        \"3044022051991631dd342317153c683a4223c531109abb9edf7e400598f22aa48e354289022016159b106f0856b807509156ae8e9b98d2381115a559aaf45b69a307ed8f8faa\",\n        \"212a4935b3142983537cfbe9d66d86463958ac627a4b08685f5b3e313d31fa7b\"\n    ],\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Transaction",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"radix.submitTransaction\",\n    \"params\": [\n        \"01030003585244263902c6047f9441ed7d6d3045406e95c07cd85c778e4b8cef3ca7abac09b95c709ee5bd18b6cd00000000000000000000000000000000000000000000000000000000000000010361d641536909fb778b00a4fb11e2d507c03b8949656dd774482ac4d2bd9c00ca00000005010300035852442602028c28a97bf8298bc0d23d8c749452a32e694b65e30a9472a3954ab30fe5324caa53dab8d80000000000000000000000000000000000000000000000008a1580485b22fffe000400000002010300035852442602028c28a97bf8298bc0d23d8c749452a32e694b65e30a9472a3954ab30fe5324caa53dab8d80000000000000000000000000000000000000000000000008963dd8c2c5dfffe00\",\n        \"3044022051991631dd342317153c683a4223c531109abb9edf7e400598f22aa48e354289022016159b106f0856b807509156ae8e9b98d2381115a559aaf45b69a307ed8f8faa\",\n        \"028c28a97bf8298bc0d23d8c749452a32e694b65e30a9472a3954ab30fe5324caa\"\n    ],\n    \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Look up Transaction",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"radix.lookupTransaction\",\n    \"params\": [\n        \"required string\"\n    ],\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Build Transaction (Unstake Tokens)",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"method\": \"radix.buildTransaction\",\n  \"params\": [\n      [\n        {\n          \"type\": \"UnstakeTokens\",\n          \"from\": \"required string\",\n          \"validator\": \"requried string\",\n          \"amount\": \"required integer\"\n        }\n      ]\n  ],\n  \"id\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://betanet.radixdlt.com/rpc",
+							"protocol": "https",
+							"host": [
+								"betanet",
+								"radixdlt",
+								"com"
+							],
+							"path": [
+								"rpc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
